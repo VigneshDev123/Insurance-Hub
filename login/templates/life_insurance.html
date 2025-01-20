@@ -1,0 +1,82 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance Schemes</title>
+    <link rel="stylesheet" href="{% static 'insurance.css' %}">
+</head>
+<body>
+Header with Logo and Website Name 
+    <header>
+        <div class="header-content">
+            <img src="{% static 'logo.png' %}" alt="Website Logo" class="logo">
+            <h1 class="website-name">Insurance Portal</h1>
+        </div>
+    </header>-->
+
+    <h2>Life Insurance Schemes</h2>
+
+    <!-- Slider Container with Navigation Buttons -->
+    <div class="slider-container">
+        <button class="slider-btn left-btn" onclick="scrollLeft()">&#10094;</button>
+        
+        <div class="horizontal-card-container" id="cardSlider">
+            <div class="card">
+                <h3>Whole Life Plan</h3>
+                <p><strong>Coverage:</strong> $250,000</p>
+                <p><strong>Premium:</strong> $600/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Lifetime coverage</li>
+                    <li>Tax-free death benefit</li>
+                    <li>Option to borrow against policy</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Term Life Insurance</h3>
+                <p><strong>Coverage:</strong> $500,000</p>
+                <p><strong>Premium:</strong> $400/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Affordable premium</li>
+                    <li>Fixed term coverage</li>
+                    <li>No cash value</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Universal Life Insurance</h3>
+                <p><strong>Coverage:</strong> $300,000</p>
+                <p><strong>Premium:</strong> $700/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Flexible premiums</li>
+                    <li>Tax-deferred cash value</li>
+                    <li>Adjustable coverage</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="slider-btn right-btn" onclick="scrollRight()">&#10095;</button>
+    </div>
+
+<!--<script>
+        function scrollLeft() {
+            document.getElementById('cardSlider').scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            document.getElementById('cardSlider').scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>-->

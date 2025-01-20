@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Application</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content-box">
+            <header class="header">
+                <div class="logo-container">
+                    <img src="{% static 'images/logo.png' %}" alt="Insurance Logo" class="logo">
+                    <h1>Insurance Hub</h1>
+                </div>
+                <p>All Your Policies, One Platform</p>
+            </header>
+            <div class="login-options">
+                <a href="{% url 'customer_login' %}" class="login-button">Customer Login</a>
+                <a href="{% url 'agency_login' %}" class="login-button">Agency Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

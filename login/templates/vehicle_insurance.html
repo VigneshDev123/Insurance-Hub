@@ -1,0 +1,74 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Insurance Schemes</title>
+    <link rel="stylesheet" href="{% static 'health.css' %}">
+</head>
+<body>-->
+    <h2>Vehicle Insurance Schemes</h2>
+
+    <!-- Slider Container with Navigation Buttons -->
+    <div class="slider-container">
+        <button class="slider-btn left-btn" onclick="scrollLeft()">&#10094;</button>
+        
+        <div class="horizontal-card-container" id="cardSlider">
+            <div class="card">
+                <h3>Comprehensive Coverage</h3>
+                <p><strong>Coverage:</strong> Up to $50,000</p>
+                <p><strong>Premium:</strong> $500/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Covers theft, fire, and accidents</li>
+                    <li>Third-party liability</li>
+                    <li>Personal accident cover</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Collision Coverage</h3>
+                <p><strong>Coverage:</strong> Up to $30,000</p>
+                <p><strong>Premium:</strong> $300/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Accident repairs</li>
+                    <li>Deductible options</li>
+                    <li>Accident replacement cover</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Third-Party Liability</h3>
+                <p><strong>Coverage:</strong> Up to $100,000</p>
+                <p><strong>Premium:</strong> $150/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Damage to other vehicles</li>
+                    <li>Injury liability</li>
+                    <li>Minimal premium</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="slider-btn right-btn" onclick="scrollRight()">&#10095;</button>
+    </div>
+
+<!--<script>
+        function scrollLeft() {
+            document.getElementById('cardSlider').scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            document.getElementById('cardSlider').scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+<!--</body>
+</html>-->

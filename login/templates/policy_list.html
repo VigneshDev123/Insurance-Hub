@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies</title>
+</head>
+<body>
+    <h1>Available Policies</h1>
+
+    {% for policy in policies %}
+    <div class="policy-card">
+        <h2>{{ policy.name }}</h2>
+        <p>{{ policy.description }}</p>
+        <p>Premium: {{ policy.premium }}</p>
+        <p>Coverage Amount: {{ policy.coverage_amount }}</p>
+        <a href="{% url 'purchase_policy' policy.id %}">
+            <button>Enroll Now</button>
+        </a>
+    </div>
+    {% endfor %}
+
+</body>
+</html>

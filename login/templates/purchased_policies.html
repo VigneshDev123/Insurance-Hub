@@ -1,0 +1,21 @@
+<h1>My Purchased Policies</h1>
+
+{% if purchased_policies %}
+    <ul>
+        {% for purchased_policy in purchased_policies %}
+        {% if forloop.counter <= 1 %}
+            <li>
+                <h2>{{ purchased_policy.policy.name }}</h2>
+                <p>Type: {{ purchased_policy.policy.type }}</p>
+                <p>Premium: {{ purchased_policy.policy.premium }}</p>
+                <p>Coverage Amount: {{ purchased_policy.policy.coverage_amount }}</p>
+                <p>Purchase Date: {{ purchased_policy.purchase_date }}</p>
+                <p>Status: {% if purchased_policy.is_active %}Active{% else %}Inactive{% endif %}</p>
+                <a href="{% url 'file_claim' purchased_policy.id %}">File a Claim</a>
+        {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>You have not purchased any policies.</p>
+{% endif %}

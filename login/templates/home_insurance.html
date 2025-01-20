@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Insurance Schemes</title>
+    <link rel="stylesheet" href="{% static 'health.css' %}">
+</head>
+<body>
+    <!-- Header with Logo and Website Name -->
+
+    <h2>Home Insurance Schemes</h2>
+
+    <!-- Slider Container with Navigation Buttons -->
+    <div class="slider-container">
+        <button class="slider-btn left-btn" onclick="scrollLeft()">&#10094;</button>
+        
+        <div class="horizontal-card-container" id="cardSlider">
+            <div class="card">
+                <h3>Standard Home Coverage</h3>
+                <p><strong>Coverage:</strong> Up to $250,000</p>
+                <p><strong>Premium:</strong> $600/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Fire and smoke damage protection</li>
+                    <li>Water damage coverage</li>
+                    <li>Liability for property damage</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Extended Home Protection</h3>
+                <p><strong>Coverage:</strong> Up to $500,000</p>
+                <p><strong>Premium:</strong> $850/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Comprehensive theft protection</li>
+                    <li>Natural disaster coverage</li>
+                    <li>Appliance and equipment breakdown</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Premium Home Insurance</h3>
+                <p><strong>Coverage:</strong> Up to $1,000,000</p>
+                <p><strong>Premium:</strong> $1,200/year</p>
+                <ul>
+                    <strong>Benefits:</strong>
+                    <li>Flood and earthquake coverage</li>
+                    <li>High-value asset protection</li>
+                    <li>Personal liability up to $1M</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="slider-btn right-btn" onclick="scrollRight()">&#10095;</button>
+    </div>
+
+    <script>
+        function scrollLeft() {
+            document.getElementById('cardSlider').scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            document.getElementById('cardSlider').scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

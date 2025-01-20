@@ -1,0 +1,16 @@
+<h1>Confirm Your Enrollment</h1>
+
+<div class="policy-card">
+    <h2>{{ policy.name }}</h2>
+    <p>Type: {{ policy.type }}</p>
+    <p>Description: {{ policy.description }}</p>
+    <p>Premium: {{ policy.premium }}</p>
+    <p>Coverage Amount: {{ policy.coverage_amount }}</p>
+</div>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Confirm Enrollment</button>
+</form>
+
+<a href="{% url 'policy_list' %}">Cancel</a>

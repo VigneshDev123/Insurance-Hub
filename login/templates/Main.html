@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Policies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .policy-card {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-size: 1.5rem;
+        }
+        header {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.website-name {
+    font-size: 1.8rem;
+    margin: 0;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{% static 'images/logo.png' %}" alt="Website Logo" class="logo">
+            <h1 class="website-name">Insurance Hub</h1>
+        </div>
+    </header>
+<div class="container mt-5">
+    <h1>Insurance Policies</h1>
+    <div id="policyCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h2>Health Insurance</h2>
+        {% for policy in policies %}
+        {% if policy.type == 'Health' %}
+            <div class="policy-card">
+            <h2>{{ policy.name }}</h2>
+            <p>{{ policy.description }}</p>
+            <p>Premium: {{ policy.premium }}</p>
+            <p>Coverage Amount: {{ policy.coverage_amount }}</p>
+            <a href="{% url 'purchase_policy' policy.id %}">
+                <button>Enroll Now</button>
+            </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+    </div>
+    </div>
+    
+            
+            <div id="policyCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h2>Life Insurance</h2>
+    {% for policy in policies %}
+    {% if policy.type == 'Life' %}
+    <div class="policy-card">
+        <h2>{{ policy.name }}</h2>
+        <p>{{ policy.description }}</p>
+        <p>Premium: {{ policy.premium }}</p>
+        <p>Coverage Amount: {{ policy.coverage_amount }}</p>
+        <a href="{% url 'purchase_policy' policy.id %}">
+            <button>Enroll Now</button>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+                </div>
+                </div>
+            </div>
+    
+            <div id="policyCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h2>Vehicle Insurance</h2>
+    {% for policy in policies %}
+    {% if policy.type == 'Auto' %}
+    <div class="policy-card">
+        <h2>{{ policy.name }}</h2>
+        <p>{{ policy.description }}</p>
+        <p>Premium: {{ policy.premium }}</p>
+        <p>Coverage Amount: {{ policy.coverage_amount }}</p>
+        <a href="{% url 'purchase_policy' policy.id %}">
+            <button>Enroll Now</button>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+    </div>
+    </div>        
+            <div id="policyCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+    <h2>Home Insurance</h2>
+    {% for policy in policies %}
+    {% if policy.type == 'Home' %}
+    <div class="policy-card">
+        <h2>{{ policy.name }}</h2>
+        <p>{{ policy.description }}</p>
+        <p>Premium: {{ policy.premium }}</p>
+        <p>Coverage Amount: {{ policy.coverage_amount }}</p>
+        <a href="{% url 'purchase_policy' policy.id %}">
+            <button>Enroll Now</button>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}              
+    </div>
+    </div>
+    
+    </div>
+    
+
+
+        <a class="carousel-control-prev" href="#policyCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#policyCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>-->
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

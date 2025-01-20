@@ -1,0 +1,91 @@
+/* Header Styling */
+header {
+    background-color: #0a74da;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.website-name {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Slider Container */
+.slider-container {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Horizontal Card Container */
+.horizontal-card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    margin: 0 10px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #0a74da;
+}
+
+.card p, .card ul {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Slider Button Styling */
+.slider-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
